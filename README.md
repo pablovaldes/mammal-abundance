@@ -22,7 +22,7 @@ The results (pre vs. post-harvest small mammal abundance) are published in the f
 Metadata
 ====================
 
-The '*analysis_[ ].R* and *sim_abundance.R* files contain the framework of the Bayesian analysis in JAGS for each of the project components listed above. Additional information is provided in the comments for each file.
+The *analysis_[ ].R* and *sim_abundance.R* files contain the framework of the Bayesian analysis in JAGS for each of the project components listed above. Additional information is provided in the comments for each file.
 
 The *models* subfolder contains the model description (in the BUGS language) for each JAGS analysis contains the corresponding JAGS analysis outputs in Rdata objects. The *figures* folder contains code generating the figures in the final manuscript.
 
