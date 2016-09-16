@@ -3,6 +3,5 @@
 .RData
 *.Rproj
 *scrub.csv
-hee_grid_covs.csv
-hee_microsite_means.csv
+hee_*
 output*
