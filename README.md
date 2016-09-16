@@ -1,6 +1,8 @@
 mammal-abundance
 ====================
 
+![](https://zenodo.org/badge/DOI/10.5281/zenodo.154200.svg)
+
 An N-mixture model approach for estimating abundance from encounter histories of untagged animals.
 
 Specifically, this analysis examined the short-term effects of silvicultural treatments on abundance of common small mammal species at the Hardwood Ecosystem Experiment (HEE) sites. Trapping data were collected yearly from 32 permanent grids established in 2007, yielding 2 pre- and 3 post-harvest years.
