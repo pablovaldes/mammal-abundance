@@ -1,12 +1,9 @@
-######################################
-##Figure Showing Estimated N
-##By Species and Year
-######################################
+#######################################################
+## Figure 3: Estimated abundance by species and year ##
+#######################################################
 
-#Read in error.bars() function
-#library(devtools)
-#install_github('kenkellner/heeparse')
-library(heeparse)
+#Read in data
+load('output/output_hee_abundance_Nmix.Rdata')
 
 #Grab output from JAGS
 control = abundance.out$sims.list$yearly.control
@@ -55,10 +52,12 @@ for (i in 1:5){
   for (j in 1:5){
     ycoord[i,j] = mean(data[,s,i,j])
     xcoord[i,j] = i + offset[j]
-    error.bars(data=data[,s,i,j],structure=structure[i]+offset[j],pch=points[j],col=colors[j],
-               quantiles=c(0.1587,0.8413),toppers=FALSE,cex=1.5)
+    lims <- quantile(data[,s,i,j],c(0.1587,0.8413),na.rm=T)
+    points(xcoord[i,j],ycoord[i,j],pch=points[j],col=colors[j],cex=1.5)
+    segments(x0=xcoord[i,j],y0=lims[1],x1=xcoord[i,j],y1=lims[2], col=colors)
   }
 }
+
 #Draw pre/post harvest separation line
 abline(v=2.5)
 
@@ -75,7 +74,7 @@ for (k in 5:5){
 
 #Plot legend
 if(leg==TRUE){
-legend(0.5,ymax,rev(c("Control","Shelter","4 ha cut","2 ha cut", "0.4 ha cut")),cex=1,
+legend('topleft',rev(c("Control","Shelter","4 ha cut","2 ha cut", "0.4 ha cut")),cex=1,
 pch=c(21,22,24,18,17),lwd=1,col=rev(colors),bg="white",bty="n")}
 }
 
@@ -89,5 +88,3 @@ par(fig=c(0,0.53,0,0.57),new=TRUE)
 abun.graph(3,5,"Short-tailed shrew",ylabel=TRUE,xlabel=TRUE,leg=FALSE)
 par(fig=c(0.47,1,0,0.57),new=TRUE)
 abun.graph(4,2.5,"Pine vole",ylabel=FALSE,xlabel=TRUE,leg=FALSE)
-  
-#End figure code

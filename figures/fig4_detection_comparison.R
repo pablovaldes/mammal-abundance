@@ -1,7 +1,9 @@
-##############################################################
-##Figure Comparing Probability of Detection
-##Between HEE Silvicultural Treatments
-##############################################################
+##########################################################
+## Figure 4: Comparing estimated p by harvest treatment ##
+##########################################################
+
+#Read in data p values are obtained from
+load('output/output_hee_abundance_Nmix.Rdata')
 
 #Set up figure structure
 par(mfrow = c(1,2))
@@ -38,6 +40,3 @@ data = cbind(a,b,c,d,e)
 barplot(data, beside=TRUE, col=gray(seq(0.1,0.9,length=2)),ylim=c(0,0.6),
         ylab="Mean detection probability",xlab=c('Treatment'),names=c('0.4 ha','2 ha','4 ha','Shelt','Control'),
 main="Mouse")
-
-#end figure code
-

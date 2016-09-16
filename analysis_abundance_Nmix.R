@@ -1,13 +1,11 @@
-#################################################
-##N-mixture Analysis of Small Mammal Abundance
-#################################################
+######################################################
+## N-mixture Analysis of HEE Small Mammal Abundance ##
+######################################################
 
 #Import capture data
 
 #Read in trap.parse() function script
-#library(devtools)
-#install_github('kenkellner/heeparse')
-library(heeparse)
+source('function_trap_parse.R')
 
 #Arguments for trap.parse()
 
@@ -176,14 +174,12 @@ modFile = "models/model_abundance_Nmix.R"
 ###########################################################################
 
 #Run analysis in JAGS
-#library(devtools)
-#install_github('kenkellner/jagsUI')
 library(jagsUI)
 abundance.out = jags(data, inits, params, model.file=modFile, 
                     n.chains=4, n.iter=15000, n.burnin=11000, n.thin=40, parallel=TRUE)
 
 #Save output
-save(abundance.out,file="output_hee_abundance_Nmix.Rda")
+save(abundance.out,file="output_hee_abundance_Nmix.Rdata")
 
 ###########################################################################
 
@@ -200,4 +196,4 @@ Nvec <- rpois(n=nsites,lambda=lambda)
 #Example simulation run with default values
 results5 = fitsim(1,Nvec,p=0.5)
 
-save(results5,file='output_sim_Nmix.Rda')
+save(results5,file='output_sim_Nmix.Rdata')

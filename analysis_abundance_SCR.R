@@ -1,14 +1,12 @@
-##########################################################
-##Spatially Explicit Capture-Recapture (SCR)
-##Analysis of HEE MRR Data
-##########################################################
+################################################
+## Spatially Explicit Capture-Recapture (SCR) ##
+## Analysis of HEE MRR Data                   ##
+################################################
 
 #Input data
 
 #Get trap.parse() function
-#library(devtools)
-#install_github('kenkellner/heeparse')
-library(heeparse)
+source('function_trap_parse.R')
 
 #Specify arguments for trap.parse()
 
@@ -252,5 +250,3 @@ mouse.ratio = 0.6502
 each.large = 3.4903
 each.small = 2.4210
 each.ratio = 0.6936
-
-#end script

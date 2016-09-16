@@ -1,11 +1,12 @@
-################################################
-##Figure - Abundance ModelBias Comparisons 
-##for Multiple p values ()
-################################################
+##############################################
+## Figure: Bias comparisons from simulation ##
+##############################################
 
+#Compare correlation and absolute bias for different abundance models
+#In master's thesis but not final paper in JWM
 
 #Load simulation workspace
-load('output_sim_Nmix.Rda')
+load('output/output_sim_Nmix.Rdata')
 data = array(data=NA, dim=c(150,7,6,30,5))
 
 data[,,,,1] = results1
@@ -38,6 +39,7 @@ for (i in 1:6){
   }
 }
 
+#Plot correlations
 barplot(meancor, beside=TRUE, col=gray(seq(0.1,0.9,length=6)),ylim=c(0,1.3),
         ylab="Mean Correlation with True Abundance",xlab=c('Detection Probability on a given Trapping Occasion'),names=c('HBT','Constant 0.5'),
         main = "Abundance Model Comparison")
@@ -58,6 +60,7 @@ for (i in 1:4){
   }
 }
 
+#Plot absolute bias
 barplot(meanbias, beside=TRUE, col=gray(seq(0.1,0.9,length=4)),
         ylab="Mean Absolute Bias",xlab=c('Detection Probability on a given Trapping Occasion'),names=c(0.1,0.3,0.5,0.7,0.9),
         main = "Abundance Model Comparison")

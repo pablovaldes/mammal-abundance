@@ -1,11 +1,11 @@
-######################################################
-##Figure Comparing Microsite Data Across
-##Silvicultural Treatments and Years
-######################################################
+######################################
+## Figure: Microsite data summaries ##
+######################################
+
+#Summaries of microsite information, used in a poster
 
 #Read in microsite.parse() function
-library(devtools)
-source_url('https://raw.github.com/kenkellner/scripts/master/microsite.parse.R')
+source('function_microsite_parse.R')
 
 #Arguments for microsite.parse()
 ngrids = 32
@@ -134,12 +134,4 @@ abline(v=2.5, lty=2)
 
 barplot(conmean[4,1:5], col=rgb(red=75,green=142,blue=26, maxColorValue=255),ylim=c(0,4),xlab='Year')
 abline(v=2.52, lty=2)
-
-###################################################
-
-#end figure
-
-
-
-
 

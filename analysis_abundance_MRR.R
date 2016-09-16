@@ -1,12 +1,12 @@
-################################
-##MRR analysis of HEE Data
-################################
+##############################
+## MRR analysis of HEE Data ##
+##############################
 
 #Load required library
 library(Rcapture)
 
-#Get trap.parse() script
-library(heeparse)
+#Get trap.parse() function
+source('function_trap_parse.R')
 
 #Arguments for trap.parse()
 
@@ -30,7 +30,7 @@ noccs = c(5,4)
 nsites = length(grid.list08)
 nyears = 3
 
-#Read in individual encounter histories
+#Read in individual encounter histories for years with marked animals
 eh1 = trap.parse('data/2008_captures_scrub.csv',species=species.list,check=occ.list,
                   grids=grid.list08,output='IndHistories')$IndHistories
 eh2 = trap.parse('data/2010_captures_scrub.csv',species=species.list,check=occ.list,
@@ -49,7 +49,7 @@ eh[,,2,2,2] = NA
 eh[,,2,3,2] = NA
 eh[,,2,5,2] = NA
 
-#Run Analyses
+#Run Analyses site x species x year
 for(i in 1:nsites){
   for (j in 1:nspecies){
     for (k in 1:nyears){
@@ -60,6 +60,3 @@ for(i in 1:nsites){
             print(closedp.t(hold))}
   
 }}}
-
-
-

@@ -1,7 +1,7 @@
-####################################################################
-##Non-parametric Analysis of HEE Microsite Data,
-##Between treatments and years
-####################################################################
+####################################################
+## Non-parametric Analysis of HEE Microsite Data, ##
+## Between treatments and years                   ##
+####################################################
 
 #Read in data (summarized CSV)
 micro.data = read.csv('data/hee_microsite_means.csv',header=TRUE)
@@ -65,5 +65,3 @@ kruskalmc(micro.data.control$litter, micro.data.control$year)
 kruskalmc(micro.data.control$herb, micro.data.control$year)
 kruskalmc(micro.data.control$wood, micro.data.control$year)
 kruskalmc(micro.data.control$cwd, micro.data.control$year)
-
-#end analysis

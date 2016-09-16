@@ -1,7 +1,6 @@
-##############################################
-##Figure Comparing N Estimates at HEE
-##From Multiple Models
-##############################################
+##########################################################
+## Figure 5: Comparison of abundance estimation methods ##
+##########################################################
 
 ngrids = 32
 nspecies = 4
@@ -10,7 +9,7 @@ noccs = 5
 #Read in abundance estimates
 
 #Total Captures
-#Requires 'counts' array from Nmix abundance analysis
+#Requires 'counts' array from 'analysis_abundance_Nmix.R'
 totalcount = array(data=NA, dim=c(32,4,5))
 for (i in 1:ngrids){
   for (j in 1:nspecies){
@@ -19,7 +18,7 @@ for (i in 1:ngrids){
 }}}
 
 #Effort (Trap Nights)
-#Requires 'eff.raw' array from Nmix abundance analysis
+#Requires 'eff.raw' array from 'analysis_abundance_Nmix.R'
 
 caps100 = (totalcount/eff.raw)*100
 

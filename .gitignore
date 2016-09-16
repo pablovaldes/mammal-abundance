@@ -1,11 +1,8 @@
 .Rproj.user
 .Rhistory
 .RData
-mammal-abundance.Rproj
-2007_captures_scrub.csv
-2008_captures_scrub.csv
-2009_captures_scrub.csv
-2010_captures_scrub.csv
-2011_captures_scrub.csv
+*.Rproj
+*scrub.csv
 hee_grid_covs.csv
 hee_microsite_means.csv
+output*
