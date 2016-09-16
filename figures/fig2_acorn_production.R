@@ -23,7 +23,7 @@ for (i in 1:nspecies){
 
 #Plot data
 barplot(graph.data, beside=TRUE, names=c("2006","2007","2008","2009","2010"), 
-        xlab="Year", ylab="Collected Acorns (Oct-Dec)", 
+        xlab="Year", ylab="Collected Acorns", 
         col=c('black','gray'), ylim=c(0,600))
 
 legend(1,600, c('Black Oak', 'White Oak'), fill=c('black','gray'), bty='n')  
