@@ -8,7 +8,7 @@ treedata = read.csv('data/hee_treedata.csv',header=TRUE)
 
 #Generate plot variables
 nspecies = 2
-nyears = 6
+nyears = 5
 
 #Create empty matrix
 graph.data = matrix(NA,nrow=nspecies,ncol=nyears)
@@ -22,7 +22,7 @@ for (i in 1:nspecies){
   }}
 
 #Plot data
-barplot(graph.data, beside=TRUE, names=c("2006","2007","2008","2009","2010","2011"), 
+barplot(graph.data, beside=TRUE, names=c("2006","2007","2008","2009","2010"), 
         xlab="Year", ylab="Collected Acorns (Oct-Dec)", 
         col=c('black','gray'), ylim=c(0,600))
 
