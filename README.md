@@ -1,7 +1,7 @@
 mammal-abundance
 ====================
 
-[![](https://zenodo.org/badge/DOI/10.5281/zenodo.154200.svg)](https://zenodo.org/record/154200)
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.154200.svg)](http://doi.org/10.5281/zenodo.154200)
 
 An N-mixture model approach for estimating abundance from encounter histories of untagged animals.
 
