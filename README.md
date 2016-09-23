@@ -26,7 +26,9 @@ Metadata
 
 The *analysis_[ ].R* and *sim_abundance.R* files contain the framework of the Bayesian analysis in JAGS for each of the project components listed above. Additional information is provided in the comments for each file.
 
-The *models* subfolder contains the model description (in the BUGS language) for each JAGS analysis contains the corresponding JAGS analysis outputs in Rdata objects. The *figures* folder contains code generating the figures in the final manuscript.
+The *models* subfolder contains the model description (in the BUGS language) for each JAGS analysis. 
+
+The *figures* folder contains code generating the figures in the final manuscript.
 
 The *data* subfolder contains example CSV files representative of the actual data used in this study. I do not currently have permission to publish the complete raw data. Columns in each CSV file are described below.
 
