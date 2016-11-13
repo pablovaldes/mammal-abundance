@@ -38,7 +38,7 @@ The *data* subfolder contains example CSV files representative of the actual dat
     -  Trap - the trap ID; each grid had 3 rows designated by letters with 9 traps in each row designated by numbers.
     -  Species - the small mammal species captured, if applicable. Represented by a code (WFMO = white-footed mouse, EACH = eastern chipmunk, SHSH = short-tailed shrew, PIVO = pine vole).
     -  id - the tag ID for the animal, if it was eartagged.
-    -  Fate - The fate of the animal and/or trap, most impmortantly '1' for new capture, '2' for re-capture, and '7' or '8' for missing/disturbed trap, etc.
+    -  Fate - The fate of the animal and/or trap, most importantly '1' for new capture, '2' for re-capture, and '7' or '8' for missing/disturbed trap, etc.
 
 2.  *example_grid_covs.csv* contains information about each trapping grid location:
     -  temp1-5 - Mean daily temperature for each of the 5 trapping days (measured on-site).
